@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borrower's Record</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" style="float: left;">ABC College</a>
+        <a href="borrower.html">Borrower's Record</a>
+        <!-- <a href="Deposit.html">Deposit Book</a>
+        <a href="Issue.html">Issue Book</a> -->
+        <a href="StuBookRecord.html">Book Record</a>
+        <a href="index.html">Admin</a>
+    </div>
+
+
+    <div class="container">
+        <h1 class="heading"><u>BORROWER'S LIST</u></h1> 
+        <div class="table-container">
+            <table id="borrowersTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Book ID</th>
+                        <th>Book Name</th>
+                        <th>Issued Date</th>
+                        <th>Deposited Date</th>
+                        <th>Deposit Book</th>
+                    </tr>
+                </thead>
+                <tbody id="borrowersBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="borrower.js"></script>
+</body>
+</html>

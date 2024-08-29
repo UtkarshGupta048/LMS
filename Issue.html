@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Issue</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <span id="bookNameSpan"></span>
+  
+  
+ 
+
+    <div class="navbar">
+        <a href="#" style="float: left;">ABC College</a>
+        <a href="borrower.html">Borrower's Record</a>
+        <!-- <a href="Deposit.html">Deposit Book</a>
+        <a href="Issue.html">Issue Book</a> -->
+        <a href="StuBookRecord.html">Book Record</a>
+        <a href="index.html">Admin</a>
+    </div>
+
+    
+        <tbody>
+            <!-- Table rows will be dynamically generated here -->
+        </tbody>
+    </table>
+
+   
+    
+       <!-- Form for issuing books -->
+       <div class="form-container">
+        <h2>Issue Book</h2>
+        <form id="issueForm">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName12" name="bookName" required><br><br>
+            <label for="bookID">Book ID:</label>
+            <input type="text" id="bookID" name="bookID" required><br><br>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required><br><br>
+            <label for="studentid">Student ID:</label>
+            <input type="text" id="studentid" name="studentid" required><br><br>
+            <label for="issueDate">Issue Date:</label>
+            <input type="date" id="issueDate" name="issueDate" required><br><br>
+            <button type="submit">Issue Book</button>
+        </form>
+    </div>
+
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+    
+        // Get the bookName parameter from the URL
+        var bookName1 = getUrlParameter('bookName1');
+        document.getElementById("bookName12").value = bookName1;
+    
+        // Get the bookID parameter from the URL
+        var bookID1 = getUrlParameter('bookID1');
+        document.getElementById("bookID").value = bookID1;
+    </script>
+    
+   
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="StudentRecord.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Clear floats after the navbar */
+.navbar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.heading{
+    text-align: center;
+    justify-content: center;
+}

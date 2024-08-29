@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" style="float: left;">ABC College</a>
+        <a href="borrower.html">Borrower's Record</a>
+        <!-- <a href="Deposit.html">Deposit Book</a>
+        <a href="Issue.html">Issue Book</a> -->
+        <a href="StuBookRecord.html">Book Record</a>
+        <a href="index.html">Admin</a>
+    </div>
+
+    <div class="container">
+        <h1 class="heading"><U>ISSUE BOOK</U></h1> 
+        <!-- <div class="left">
+            <h2>Enter Book Details:</h2>
+            <form id="dataForm">
+                <label for="name">Book Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="id">Book ID:</label>
+                <input type="text" id="id" name="id" required>
+                <label for="author">Author Name:</label>
+                <input type="text" id="author" name="author" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+                <button type="submit">Submit</button>
+            </form> -->
+        </div>
+        <div class="right">
+            <h2>Book Record:</h2>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Author Name</th>
+                        <th>Book ID</th>
+                        <th>Avail Quantity</th>
+                        <th>Total Quantity</th>
+                        <th>Issue Book</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="StuBookRecord_Script.js"></script>
+</body>
+</html>
